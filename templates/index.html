@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="HQL">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>恶意代码检测系统</title>
+    <link rel="shortcut icon" href="../static/img/3.png">
+
+
+    <!-- Bootstrap core CSS -->
+{#<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">#}
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/dist/css/bootstrap.min.css') }}">
+
+{#      <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>#}
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+<style>
+      #hide{display: none;}
+</style>
+
+    <!-- Custom styles for this template -->
+     <link href="{{ url_for('static', filename='features.css') }}" rel="stylesheet">
+      <link href="{{ url_for('static', filename='fileinput/css/fileinput.min.css') }}" rel="stylesheet">
+
+  </head>
+  <body>
+
+<header>
+<div class="collapse bg-dark" id="navbarHeader">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-md-7 py-4">
+      <h4 class="text-white">关于</h4>
+      <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+    </div>
+    <div class="col-sm-4 offset-md-1 py-4">
+      <h4 class="text-white">联系</h4>
+      <ul class="list-unstyled">
+        <li><a href="#" class="text-white">Follow on QQ</a></li>
+        <li><a href="#" class="text-white">Like on Wechat</a></li>
+        <li><a href="#" class="text-white">Email me</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<div class="navbar navbar-dark bg-dark shadow-sm">
+<div class="container">
+  <a href="#" class="navbar-brand d-flex align-items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+    <strong>恶意代码检测系统</strong>
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</div>
+</div>
+</header>
+
+{#<div class="alert alert-warning fade" role="alert" id="myModel" aria-hidden="true">#}
+{#  <a href="#" class="alert-link">恶意代码检测中，可能需要等待几十秒</a>#}
+{#</div>#}
+{#<div class="alert alert-block hide" id="warning-block">#}
+{#    <button type="button" class="close" data-dismiss="alert">&times;</button>#}
+{#    <h4>Warning!</h4>Best check yo self, you're not...#}
+{#</div>#}
+{##}
+{#<script type="text/javascript">#}
+{#    $("#warning-block").show();#}
+{#</script>#}
+
+<div class="d-flex justify-content-center">
+<div class="spinner-border"role="status" id="hide">
+</div>
+</div>
+
+<main>
+  <h1 class="visually-hidden">Heroes examples</h1>
+
+  <div class="b-example-divider"></div>
+
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="{{ url_for('static', filename='img/bootstrap-docs.png') }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">基于深度图卷积神经网络的行为恶意软件检测</h1>
+        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+
+
+    <form action="" enctype="multipart/form-data" method="post">
+        <div>
+            <input name="file" type="file" multiple>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2" onclick="showalert()" id="show">Submit</button>
+        <button type="reset" class="btn btn-outline-secondary btn-lg px-4">Reset</button>
+    </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+
+
+    <div class="container px-4 py-5" id="custom-cards">
+    <h2 class="pb-2 border-bottom">Custom</h2>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('../static/img/3.png');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">计算机病毒</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="../static/img/haha.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                <small>Earth</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small>3d</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('../static/img/11.png');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">木马</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="../static/img/haha.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                <small>Pakistan</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small>4d</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('../static/img/4.png');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">计算机蠕虫</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="../static/img/haha.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                <small>California</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small>5d</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-muted">&copy; 2021 大创小组</p>
+
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+  </footer>
+</div>
+
+</main>
+
+<script type="text/javascript">
+ window.onload = function(){
+document.getElementById("show").onclick = function(){
+ document.getElementById("hide").style.display = "block";
+}
+ }
+
+</script>
+
+<script src="{{ url_for('static', filename='assets/dist/js/bootstrap.bundle.min.js') }}"></script>
+
+  </body>
+</html>
